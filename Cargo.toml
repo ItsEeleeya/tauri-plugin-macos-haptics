@@ -7,7 +7,7 @@ description = "Utilize the Taptic Engine (TM) on macOS for Tauri v2 apps."
 repository = "https://github.com/itseeleeya/tauri-plugin-macos-haptics"
 edition = "2021"
 rust-version = "1.70"
-exclude = ["/examples", "/webview-dist", "/webview-src", "/node_modules"]
+exclude = ["/example", "/dist-js", "/guest-js", "/node_modules"]
 links = "tauri-plugin-macos-haptics"
 
 [dependencies]
