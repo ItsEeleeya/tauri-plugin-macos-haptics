@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/itseeleeya/tauri-plugin-macos-haptics.git"
   },
-  "description": "Utilize native haptic feedback through the NSHapticFeedback for Tauri v2 apps on macOS.",
+  "description": "Utilize the Taptic Engine (TM) on macOS for Tauri v2 apps.",
   "type": "module",
   "types": "./dist-js/index.d.ts",
   "main": "./dist-js/index.cjs",
@@ -22,8 +22,8 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "prepublishOnly": "yarn build",
-    "pretest": "yarn build"
+    "prepublishOnly": "npm run build",
+    "pretest": "npm run build"
   },
   "dependencies": {
     "@tauri-apps/api": ">=2.0.0-beta.6"
