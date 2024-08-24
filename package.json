@@ -2,6 +2,12 @@
   "name": "tauri-plugin-macos-haptics-api",
   "version": "1.0.0-rc.0",
   "author": "ItsEeleeya",
+  "license": "MIT",
+  "keywords": [
+    "tauri",
+    "tauri-plugin",
+    "haptics"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/itseeleeya/tauri-plugin-macos-haptics.git"
