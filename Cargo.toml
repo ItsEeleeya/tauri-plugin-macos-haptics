@@ -2,6 +2,7 @@
 name = "tauri-plugin-macos-haptics"
 version = "1.0.0-rc.0"
 authors = ["ItsEeleeya"]
+license = "MIT"
 description = "Utilize the Taptic Engine (TM) on macOS for Tauri v2 apps."
 repository = "https://github.com/itseeleeya/tauri-plugin-macos-haptics"
 edition = "2021"
