@@ -25,6 +25,17 @@ Or get the latest using git:
 tauri-plugin-macos-haptics = { git = "https://github.com/ItsEeleeya/tauri-plugin-macos-haptics/" }
 ```
 
+### Get the frontend bindings
+```
+pnpm add tauri-plugin-macos-haptics-api
+# or
+bun add tauri-plugin-macos-haptics-api
+# or
+npm add tauri-plugin-macos-haptics-api
+# or
+yarn add tauri-plugin-macos-haptics-api
+```
+
 ## Usage
 **1. First initialize the plugin**
 
