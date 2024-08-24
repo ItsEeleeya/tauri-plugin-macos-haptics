@@ -1,0 +1,12 @@
+{
+  "identifier": "main",
+  "description": "permissions for desktop app",
+  "local": true,
+  "windows": ["main"],
+  "permissions": [
+    "core:window:default",
+    "core:window:allow-start-dragging",
+    "shell:default",
+    "macos-haptics:default"
+  ]
+}

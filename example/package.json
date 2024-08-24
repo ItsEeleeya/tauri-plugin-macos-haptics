@@ -1,0 +1,44 @@
+{
+  "name": "macos-haptics-example",
+  "private": true,
+  "type": "module",
+  "description": "",
+  "scripts": {
+    "start": "vinxi start",
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "serve": "vinxi serve",
+    "tauri": "tauri",
+    "format": "prettier --write src"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@solidjs/router": "^0.13.6",
+    "@solidjs/start": "^1.0.6",
+    "@tauri-apps/api": "2.0.0-rc.0",
+    "@tauri-apps/plugin-shell": "2.0.0-rc.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.29",
+    "lucide-react": "^0.429.0",
+    "solid-js": "^1.8.19",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss": "^3.4.7",
+    "tailwindcss-animate": "^1.0.7",
+    "tauri-plugin-macos-haptics-api": "link:../.",
+    "vinxi": "^0.4.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.0.0-rc.0",
+    "@types/node": "^22.5.0",
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.10",
+    "internal-ip": "^7.0.0",
+    "postcss": "^8.4.41",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5",
+    "vite-plugin-solid": "^2.10.2"
+  }
+}
