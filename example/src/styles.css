@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+
   :root,
   html,
   body {
-    @apply bg-base-200 bg-opacity-50;
+    @apply bg-base-200 bg-opacity-50 overscroll-none select-none;
   }
 }

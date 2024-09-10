@@ -45,8 +45,8 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.7)
       tauri-plugin-macos-haptics-api:
-        specifier: github:ItsEeleeya/tauri-plugin-macos-haptics
-        version: https://codeload.github.com/ItsEeleeya/tauri-plugin-macos-haptics/tar.gz/d88fcc63db49c597db5732c6370f7f350610d0e3
+        specifier: link:../.
+        version: link:..
       vinxi:
         specifier: ^0.4.0
         version: 0.4.1(@opentelemetry/api@1.9.0)(@types/node@22.5.0)(ioredis@5.4.1)(terser@5.31.1)
@@ -2751,10 +2751,6 @@ packages:
   tar@6.2.1:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
-
-  tauri-plugin-macos-haptics-api@https://codeload.github.com/ItsEeleeya/tauri-plugin-macos-haptics/tar.gz/d88fcc63db49c597db5732c6370f7f350610d0e3:
-    resolution: {tarball: https://codeload.github.com/ItsEeleeya/tauri-plugin-macos-haptics/tar.gz/d88fcc63db49c597db5732c6370f7f350610d0e3}
-    version: 1.0.0-rc.0
 
   terracotta@1.0.5:
     resolution: {integrity: sha512-4jkpXGKemeWjsBGDoBK1tnovGfIEMM8+Fa99T0TD4VYUaZq6hXHEWMfHshxy1h+DzsanDAwSBIBM0NnOohzijw==}
@@ -5666,10 +5662,6 @@ snapshots:
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0
-
-  tauri-plugin-macos-haptics-api@https://codeload.github.com/ItsEeleeya/tauri-plugin-macos-haptics/tar.gz/d88fcc63db49c597db5732c6370f7f350610d0e3:
-    dependencies:
-      '@tauri-apps/api': 2.0.0-rc.0
 
   terracotta@1.0.5(solid-js@1.8.19):
     dependencies:
