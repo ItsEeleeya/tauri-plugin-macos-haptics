@@ -2,7 +2,7 @@
  * Bindings for tauri_plugin_macos_haptics
  * https://github.com/ItsEeleeya/tauri-plugin-macos-haptics/
  */
-import { invoke } from "@tauri-apps/api/core";
+import { invoke, Resource } from "@tauri-apps/api/core";
 
 const CMD_PERFORM = "plugin:macos-haptics|perform";
 const CMD_IS_SUPPORTED = "plugin:macos-haptics|is_supported";
@@ -79,4 +79,53 @@ export async function perform(
   }).catch((error) =>
     console.error("Error performing haptic feedback: ", error)
   );
+}
+
+/**
+
+const feedbackFilter = await AlignmentFeedbackFilter.new();
+const horizontal = feedbackFilter.tokenForHorizontalMovement(
+  WebviewWindow.getByLabel("main"), 0, 0, 0
+);
+const vertical = feedbackFilter.tokenForVerticalMovement(
+  null, 0, 0, 0
+);
+feedbackFilter.perform(PerformanceTime.Default, horizontal, vertical);
+
+ */
+
+class AlignmentFeedbackFilter extends Resource {
+  public id: string;
+
+  private constructor(rid: number, id: string) {
+    super(rid);
+    this.id = id;
+  }
+
+  static async getById(id: string): Promise<AlignmentFeedbackFilter | null> {
+    return invoke<number | null>(
+      "plugin:macos-haptics|get_alignment_feedback_filter_by_id",
+      { id }
+    ).then((rid) => (rid ? new AlignmentFeedbackFilter(rid, id) : null));
+  }
+
+  static async removeById(id: string): Promise<void> {
+    return invoke(
+      "plugin:macos-haptics|remove_alignment_feedback_filter_by_id",
+      { id }
+    );
+  }
+
+  static async new(): Promise<AlignmentFeedbackFilter> {
+    return invoke<[number, string]>(
+      "plugin:macos-haptics|new_alignment_feedback_filter"
+    ).then(([rid, id]) => new AlignmentFeedbackFilter(rid, id));
+  }
+}
+
+//
+function _test() {
+  const alignmentFeedbackController = AlignmentFeedbackController.new();
+
+  alignmentFeedbackController.close();
 }

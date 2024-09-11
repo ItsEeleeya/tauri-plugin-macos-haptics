@@ -1,6 +1,6 @@
 [package]
 name = "tauri-plugin-macos-haptics"
-version = "1.0.0-rc.0"
+version = "2.0.0-beta.0"
 authors = ["ItsEeleeya"]
 license = "MIT"
 description = "Utilize the Taptic Engine (TM) on macOS for Tauri v2 apps."
@@ -10,13 +10,24 @@ rust-version = "1.70"
 exclude = ["/example", "/dist-js", "/guest-js", "/node_modules"]
 links = "tauri-plugin-macos-haptics"
 
+[features]
+alignment-feedback = []
+
 [dependencies]
-tauri = { version = "2.0.0-rc.0" }
+tauri = { version = "2.0.0-rc.11" }
 serde = "1.0"
 
-[target.'cfg(target_os = "macos")'.dependencies]
-cocoa = "0.25.0"
-objc = "0.2.7"
+[target."cfg(target_os = \"macos\")".dependencies]
+objc2 = { version = "0.5.2" }
+objc2-foundation = { version = "0.2.2", features = [
+  "NSArray",
+  "NSString",
+  "NSEnumerator",
+] }
+objc2-app-kit = { version = "0.2.2", features = [
+  "NSHapticFeedback",
+  "NSAlignmentFeedbackFilter",
+] }
 
 [build-dependencies]
-tauri-plugin = { version = "2.0.0-rc.0", features = ["build"] }
+tauri-plugin = { version = "2.0.0-rc.10", features = ["build"] }
