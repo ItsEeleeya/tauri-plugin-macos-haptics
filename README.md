@@ -1,4 +1,5 @@
 # Tauri Plugin macOS Haptics
+
 Utilize the Taptic Engine™️ on macOS for Tauri v2 apps.
 
 <center>
@@ -6,26 +7,31 @@ Utilize the Taptic Engine™️ on macOS for Tauri v2 apps.
 </center>
 
 ## Get the plugin
+
 Using the command line from crates.io:
+
 ```
 $ cargo add tauri-plugin-macos-haptics
 ```
 
 Or add it manually to `Cargo.toml`:
+
 ```toml
 [target.'cfg(target_os = "macos")'.dependencies]
-tauri-plugin-macos-haptics = "1.0.0-rc.0"
+tauri-plugin-macos-haptics = "1.0.0-rc.1"
 ```
-Note: if you want to include this only on macOS, put 
 
+Note: if you want to include this only on macOS, put
 
 Or get the latest using git:
+
 ```toml
 [target.'cfg(target_os = "macos")'.dependencies]
 tauri-plugin-macos-haptics = { git = "https://github.com/ItsEeleeya/tauri-plugin-macos-haptics/" }
 ```
 
 ### Get the frontend bindings
+
 ```
 pnpm add tauri-plugin-macos-haptics-api
 # or
@@ -37,9 +43,11 @@ yarn add tauri-plugin-macos-haptics-api
 ```
 
 ## Usage
+
 **1. First initialize the plugin**
 
 This is only needed if you want to use it from the frontend.
+
 ```rs
 fn main() {
   let mut builder = tauri::Builder::default();
@@ -67,6 +75,7 @@ Usually found under `src-tauri/capabilities/*.json`
 **3. Perform a haptic feedback**
 
 From Rust:
+
 ```rs
   use tauri_plugin_macos_haptics::haptics::*;
 
@@ -80,23 +89,29 @@ From Rust:
 ```
 
 From the frontend (Typescript):
+
 ```ts
-  import { isSupported, perform, HapticFeedbackPattern, PerformanceTime } from 'tauri-plugin-macos-haptics-api';
- 
-  if (await isSupported()) {
-    perform(HapticFeedbackPattern.LevelChange, PerformanceTime.Now);
-    // Or call the function with no arguments to default to Generic and now.
-  }
+import {
+  isSupported,
+  perform,
+  HapticFeedbackPattern,
+  PerformanceTime,
+} from "tauri-plugin-macos-haptics-api";
+
+if (await isSupported()) {
+  perform(HapticFeedbackPattern.LevelChange, PerformanceTime.Now);
+  // Or call the function with no arguments to default to Generic and now.
+}
 ```
+
 ⚠️ **Please note that you should trigger a feedback ONLY in response to user-initiated actions.**
 Ideally, visual feedback, such as a highlight or appearance of an alignment guide, should accompany the feedback.
 
 > In some cases, the system may override a call to this method. For example, a Force Touch trackpad won’t provide haptic feedback if the user isn’t touching the trackpad. <br>
-Haptic feedback is intended to be provided in response to a user action, such as aligning one object to another. Do not use it to provide feedback for events that are not user initiated. Excessive or unnecessary haptic feedback could be interpreted by the user as a malfunction and could encourage the user to disable haptic feedback entirely.
+> Haptic feedback is intended to be provided in response to a user action, such as aligning one object to another. Do not use it to provide feedback for events that are not user initiated. Excessive or unnecessary haptic feedback could be interpreted by the user as a malfunction and could encourage the user to disable haptic feedback entirely.
 
 [Learn more about NSHapticFeedbackManager (Apple's documentation)](https://developer.apple.com/documentation/appkit/nshapticfeedbackmanager)
 
-
 ## Contributions
-Any contributions are welcomed!
 
+Any contributions are welcomed!
