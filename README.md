@@ -18,7 +18,7 @@ Or add it manually to `Cargo.toml`:
 
 ```toml
 [target.'cfg(target_os = "macos")'.dependencies]
-tauri-plugin-macos-haptics = "1.0.0-rc.1"
+tauri-plugin-macos-haptics = "1.0.0"
 ```
 
 Note: if you want to include this only on macOS, put
