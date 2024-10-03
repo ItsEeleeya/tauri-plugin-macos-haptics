@@ -5,7 +5,7 @@ Default permissions for the plugin
 - `allow-is-supported`
 - `allow-perform`
 
-## Permission Table 
+## Permission Table
 
 <table>
 <tr>

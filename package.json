@@ -1,6 +1,6 @@
 {
   "name": "tauri-plugin-macos-haptics-api",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0",
   "author": "ItsEeleeya",
   "license": "MIT",
   "keywords": [
@@ -33,7 +33,7 @@
     "run-example": "pnpm run build && cd example && pnpm tauri dev"
   },
   "dependencies": {
-    "@tauri-apps/api": ">=2.0.0-beta.6"
+    "@tauri-apps/api": ">=2.0.1"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",

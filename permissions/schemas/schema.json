@@ -295,39 +295,29 @@
       "type": "string",
       "oneOf": [
         {
-          "description": "allow-is-supported -> Enables the is_supported command without any pre-configured scope.",
+          "description": "Enables the is_supported command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-is-supported"
-          ]
+          "const": "allow-is-supported"
         },
         {
-          "description": "deny-is-supported -> Denies the is_supported command without any pre-configured scope.",
+          "description": "Denies the is_supported command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-is-supported"
-          ]
+          "const": "deny-is-supported"
         },
         {
-          "description": "allow-perform -> Enables the perform command without any pre-configured scope.",
+          "description": "Enables the perform command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-perform"
-          ]
+          "const": "allow-perform"
         },
         {
-          "description": "deny-perform -> Denies the perform command without any pre-configured scope.",
+          "description": "Denies the perform command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-perform"
-          ]
+          "const": "deny-perform"
         },
         {
-          "description": "default -> Default permissions for the plugin",
+          "description": "Default permissions for the plugin",
           "type": "string",
-          "enum": [
-            "default"
-          ]
+          "const": "default"
         }
       ]
     }

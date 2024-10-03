@@ -15,8 +15,8 @@
   "dependencies": {
     "@solidjs/router": "^0.13.6",
     "@solidjs/start": "^1.0.6",
-    "@tauri-apps/api": "2.0.0-rc.0",
-    "@tauri-apps/plugin-shell": "2.0.0-rc.0",
+    "@tauri-apps/api": "2.0.0",
+    "@tauri-apps/plugin-shell": "2.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.29",
@@ -29,7 +29,7 @@
     "vinxi": "^0.4.0"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "2.0.0-rc.0",
+    "@tauri-apps/cli": "2.0.0",
     "@types/node": "^22.5.0",
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.10",

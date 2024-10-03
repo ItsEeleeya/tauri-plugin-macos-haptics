@@ -1,6 +1,6 @@
 [package]
 name = "tauri-plugin-macos-haptics"
-version = "1.0.0-rc.1"
+version = "1.0.0"
 authors = ["ItsEeleeya"]
 license = "MIT"
 description = "Utilize the Taptic Engine (TM) on macOS for Tauri v2 apps."
@@ -11,12 +11,12 @@ exclude = ["/example", "/dist-js", "/guest-js", "/node_modules"]
 links = "tauri-plugin-macos-haptics"
 
 [dependencies]
-tauri = { version = "2.0.0-rc.11" }
+tauri = { version = "2.0.0" }
 serde = "1.0"
 
 [target.'cfg(target_os = "macos")'.dependencies]
-cocoa = "0.25.0"
+cocoa = "0.26.0"
 objc = "0.2.7"
 
 [build-dependencies]
-tauri-plugin = { version = "2.0.0-rc.10", features = ["build"] }
+tauri-plugin = { version = "2.0.0", features = ["build"] }
